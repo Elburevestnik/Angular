@@ -1,0 +1,10 @@
+<button class="app-menu-btn" mat-button [matMenuTriggerFor]="menu">{{name}}</button>
+<mat-menu #menu>
+  <div mat-menu-item *ngFor="let menuItem of menuItems">
+      <ng-container [ngTemplateOutlet]="customTemplate ?? default" [ngTemplateOutletContext]="{$implicit: menuItem}"></ng-container>
+  </div>
+</mat-menu>
+
+<ng-template #default let-menuItem>
+  <span (click)="onClickMenuItem.emit(menuItem?.entry)">{{menuItem?.name}}</span>
+</ng-template>
