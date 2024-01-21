@@ -1,8 +1,10 @@
 :host {
+  position: relative;
   display: flex;
   align-items: center;
   height: 50px;
   width: 100%;
-  background-color: darkslateblue;
+  background-color: #515151;
   color: white;
+  z-index: 1000;
 }

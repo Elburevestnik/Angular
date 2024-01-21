@@ -1,0 +1,114 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 137px;
+  padding: 0 125px;
+}
+
+.app-home {
+  &-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 94px;
+  }
+
+  &__description {
+    padding: var(--app-home-description-padding, 67px 0 0);
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+  }
+
+  &__start {
+    height: calc(100vh - 142px);
+
+    &-placeholder {
+      container-type: size;
+      position: relative;
+      flex: 0 0 50vw;
+      height: 100%;
+      margin-right: -125px;
+      background-image: url("/assets/img/Placeholder.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &-video {
+      position: absolute;
+      background-image: url("/assets/img/Video.png");
+      filter: drop-shadow(-20px 60px 220px rgba(0, 0, 0, 0.44));
+      width: 400px;
+      height: 310px;
+      left: -14%;
+
+      @container (max-height: 310px) {
+        display: none;
+      }
+
+      @container (min-height: 460px) {
+        bottom: 10cqi;
+      }
+
+      @container (min-height: 840px) {
+        bottom: 20%;
+      }
+    }
+  }
+
+  &__about {
+    --app-home-description-padding: 37px 0 0;
+
+    &-placeholder {
+      display: block;
+      width: 475px;
+      height: 564px;
+      flex-basis: 50%;
+    }
+
+    &-description {
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    &._light {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 4px;
+    }
+  }
+
+  &__services {
+    &-list {
+      flex: 0 0 50%;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 21px;
+      max-height: 200px;
+
+
+      &-item {
+        font-family: FiraSans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+        color: #22222280;
+      }
+
+    }
+
+  }
+
+}
+

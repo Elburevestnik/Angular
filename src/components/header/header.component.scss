@@ -1,13 +1,16 @@
 :host {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 50px;
   width: 100%;
-  background-color: coral;
+  background-color: white;
+  z-index: 1000;
 }
 
 .app-header {
+  height: 142px;
+
   &-navigation {
     display: flex;
     align-items: center;

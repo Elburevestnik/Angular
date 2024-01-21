@@ -5,7 +5,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {CommonModule, NgForOf} from "@angular/common";
 import {BrowserModule} from "@angular/platform-browser";
-import {MenuItemType} from "../../types/menu-item.type";
+import {MenuItemType} from "../../../types/menu-item.type";
 
 @Component({
   selector: 'app-menu',

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from "../components/header/header.component";
 import {FooterComponent} from "../components/footer/footer.component";
@@ -10,6 +10,10 @@ import {CommonModule} from "@angular/common";
   imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  host: {
+    'class': 'app'
+  },
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
   title = 'angular-learning';

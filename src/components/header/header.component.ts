@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MenuComponent} from "../menu/menu.component";
+import {MenuComponent} from "../shared/menu/menu.component";
 import {routes} from "../../app/app.routes";
 import {MenuItemType} from "../../types/menu-item.type";
 import {Route, Router, RouterLink} from "@angular/router";
@@ -18,10 +18,5 @@ export class HeaderComponent {
   protected readonly pages: MenuItemType<Route>[] = routes.map(route => ({name: typeof route.title === 'string' ? route.title : '', entry: route}));
 
   constructor(private router: Router) {
-  }
-
-
-  handlePageRouteClick(route: Route) {
-    route.path && this.router.navigateByUrl(route.path);
   }
 }

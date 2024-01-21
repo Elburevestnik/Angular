@@ -1,5 +1,48 @@
-body {
+body, h1, h2, h3, h4, ul, li, p {
   padding: 0;
   margin: 0;
+
+  font-family: FiraSans;
 }
 
+h1 {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px;
+}
+
+h2, h3, h4 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: -1px;
+}
+
+p {
+  font-family: FiraSans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+@font-face {
+  font-family: "FiraSans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("FiraSans"),
+  url("/assets/fonts/FiraSans-Regular.ttf");
+}
+
+
+//OVERRIDES
+button.mat-mdc-button {
+  --mdc-text-button-container-height: 50px;
+
+  --mdc-text-button-label-text-font: FiraSans;
+  --mdc-text-button-label-text-size: 14px;
+  --mdc-text-button-label-text-tracking: 4px;
+  --mdc-text-button-label-text-weight: 500;
+}
